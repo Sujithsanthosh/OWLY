@@ -1,0 +1,51 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install Dependencies
+        run: |
+          cd backend
+          npm install
+
+      - name: Build
+        run: |
+          cd backend
+          npm run build
+
+      - name: Build Docker Image
+        run: |
+          cd backend
+          docker build -t owly-backend .
+
+      # Example for AWS ECR/ECS (Commented out until secrets are set)
+      # - name: Configure AWS credentials
+      #   uses: aws-actions/configure-aws-credentials@v4
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: us-east-1
+      #
+      # - name: Login to Amazon ECR
+      #   id: login-ecr
+      #   uses: aws-actions/amazon-ecr-login@v2
+      #
+      # - name: Push to ECR
+      #   run: |
+      #     docker tag owly-backend:latest ${{ steps.login-ecr.outputs.registry }}/owly-backend:latest
+      #     docker push ${{ steps.login-ecr.outputs.registry }}/owly-backend:latest

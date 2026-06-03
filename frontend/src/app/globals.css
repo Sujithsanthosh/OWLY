@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
+
+/* ============================================================
+   OWLY — Design Tokens
+   ============================================================ */
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Brand Colors */
+  --color-brand-violet:   #8B5CF6;
+  --color-brand-violet-dark: #6D28D9;
+  --color-brand-pink:     #EC4899;
+  --color-brand-orange:   #F97316;
+  --color-brand-purple:   #A855F7;
+
+  /* Backgrounds */
+  --color-bg:             #070711;
+  --color-surface:        #0D0D1F;
+  --color-card:           #13132A;
+  --color-card-hover:     #19193A;
+
+  /* Borders */
+  --color-border:         rgba(255,255,255,0.06);
+  --color-border-hover:   rgba(255,255,255,0.12);
+
+  /* Text */
+  --color-text:           #F8F8FC;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted:     #52525B;
+
+  /* Semantic */
+  --color-live:           #EF4444;
+  --color-success:        #22C55E;
+  --color-warning:        #EAB308;
+}
+
+/* ============================================================
+   BASE LAYER
+   ============================================================ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   CUSTOM UTILITIES
+   ============================================================ */
+
+/* --- Glassmorphism --- */
+@utility glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@utility glass-strong {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@utility glass-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Gradient Text --- */
+@utility text-gradient {
+  background: linear-gradient(135deg, #A855F7, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-orange {
+  background: linear-gradient(135deg, #F97316, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-white {
+  background: linear-gradient(135deg, #ffffff, rgba(255,255,255,0.55));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Glow Shadows --- */
+@utility glow-violet {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.35), 0 0 60px rgba(139, 92, 246, 0.1);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.35), 0 0 60px rgba(236, 72, 153, 0.1);
+}
+
+@utility glow-orange {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.35), 0 0 60px rgba(249, 115, 22, 0.1);
+}
+
+@utility glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+}
+
+/* --- Gradient Backgrounds --- */
+@utility bg-gradient-brand {
+  background: linear-gradient(135deg, #6D28D9, #EC4899);
+}
+
+@utility bg-gradient-food {
+  background: linear-gradient(135deg, #F97316, #EC4899);
+}
+
+@utility bg-gradient-fashion {
+  background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+}
+
+/* --- Buttons --- */
+@utility btn-primary {
+  background: linear-gradient(135deg, #7C3AED, #EC4899);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  &:hover {
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+@utility btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #F8F8FC;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+/* --- Scrollbar --- */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* --- Surface --- */
+@utility surface {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@utility card {
+  background-color: var(--color-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.5rem;
+}
+
+/* --- Masks --- */
+@utility mask-top {
+  mask-image: linear-gradient(to bottom, transparent, black 25%);
+}
+
+@utility mask-bottom {
+  mask-image: linear-gradient(to top, transparent, black 25%);
+}
+
+/* --- Live Pulse dot --- */
+@utility live-dot {
+  width: 8px;
+  height: 8px;
+  background: #EF4444;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  animation: live-pulse 1.8s ease-in-out infinite;
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+@keyframes live-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes float-up {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-80px) scale(1.4); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neon-breathe {
+  0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+  50%       { box-shadow: 0 0 35px rgba(139, 92, 246, 0.5), 0 0 70px rgba(139, 92, 246, 0.15); }
+}
+
+/* ============================================================
+   GLOBAL OVERRIDES
+   ============================================================ */
+input, textarea {
+  font-family: var(--font-sans);
+}
+
+/* Snap scroll feed */
+.snap-feed {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+.snap-feed::-webkit-scrollbar {
+  display: none;
+}

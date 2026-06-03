@@ -1,0 +1,26 @@
+[mcp_servers.ruflo]
+args = [
+    "/c",
+    "npx",
+    "-y",
+    "ruflo@latest",
+    "mcp",
+    "start",
+]
+command = "cmd"
+
+[mcp_servers.ruflo.env]
+CLAUDE_FLOW_HOOKS_ENABLED = "true"
+CLAUDE_FLOW_MAX_AGENTS = "5"
+CLAUDE_FLOW_MEMORY_BACKEND = "memory"
+CLAUDE_FLOW_MODE = "v3"
+CLAUDE_FLOW_TOPOLOGY = "mesh"
+npm_config_update_notifier = "false"
+
+[shell_environment_policy]
+inherit = "core"
+
+[shell_environment_policy.set]
+CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS = "1"
+CLAUDE_FLOW_HOOKS_ENABLED = "true"
+CLAUDE_FLOW_V3_ENABLED = "true"

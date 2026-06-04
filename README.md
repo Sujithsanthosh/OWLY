@@ -1,5 +1,9 @@
 # 🚀 OWLY - Community Commerce as a Service (CaaS) Platform
 
+[![CI/CD](https://github.com/Sujithsanthosh/OWLY/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Sujithsanthosh/OWLY/actions/workflows/ci-cd.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Sujithsanthosh/OWLY/pulls)
+
 A production-ready AI-powered social commerce platform that combines ecommerce, communities, creator economy, and hyperlocal commerce for **FOOD** and **FASHION**.
 
 Think of it as: **Shopify + Instagram + Discord + Swiggy + TikTok Shop = OWLY**
@@ -348,14 +352,23 @@ npm run test:e2e
 
 ## 🤝 Contributing
 
-1. Create a feature branch
-2. Make your changes
-3. Write/update tests
-4. Submit a pull request
+Read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📜 License
 
-MIT License - feel free to use this project
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⭐ Star History
+
+If you find this project useful, please give it a star! Your support helps us grow!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Sujithsanthosh/OWLY&type=Date)](https://star-history.com/#Sujithsanthosh/OWLY&Date)
 
 ## 🆘 Support
 

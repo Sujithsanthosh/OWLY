@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^6.4.0",

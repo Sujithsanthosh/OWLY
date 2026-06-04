@@ -3,10 +3,26 @@
 [![CI/CD](https://github.com/Sujithsanthosh/OWLY/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Sujithsanthosh/OWLY/actions/workflows/ci-cd.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Sujithsanthosh/OWLY/pulls)
+[![Zero Commission](https://img.shields.io/badge/Commission-0%25-brightgreen.svg)](https://github.com/Sujithsanthosh/OWLY)
+[![Zero Delivery Fees](https://img.shields.io/badge/Delivery%20Fees-0%25-brightgreen.svg)](https://github.com/Sujithsanthosh/OWLY)
+
+> **Zero Commission • Zero Delivery Fees • 100% Creator Empowerment**
 
 A production-ready AI-powered social commerce platform that combines ecommerce, communities, creator economy, and hyperlocal commerce for **FOOD** and **FASHION**.
 
 Think of it as: **Shopify + Instagram + Discord + Swiggy + TikTok Shop = OWLY**
+
+## 🤑 Why OWLY? The Anti-Commission Revolution
+
+**Tired of platforms eating into your profits?** 
+
+| Traditional Platforms | OWLY |
+|----------------------|------|
+| Swiggy/Zomato: 25-30% seller fees | **ZERO seller fees** |
+| Zepto/Blinkit: High delivery charges | **ZERO delivery commissions** |
+| Amazon/Flipkart: 15-20% listing fees | **Keep 100% of your sales** |
+
+OWLY is the ethical alternative where creators and sellers thrive, not survive. Join the movement to democratize commerce!
 
 ## ✨ Features
 
@@ -397,12 +413,26 @@ For issues, questions, or suggestions:
 
 ## 💡 Business Model
 
-- **Transaction Commissions** - Percentage on each sale
-- **Promoted Listings** - Sellers can boost visibility
-- **Creator Monetization** - Platform cut of affiliate commissions
-- **Subscription Plans** - Premium community features
-- **Membership Programs** - Customer loyalty programs
-- **Advertising** - Targeted ads to users
+**Zero Commission for Everyone!** Unlike Swiggy, Zomato, Zepto, or other e-commerce platforms that charge sellers 15-30% commissions and delivery agents high fees, OWLY is built on radical transparency:
+
+| Platform | Seller Commission | Delivery Fee |
+|----------|----------------|------------|
+| Swiggy/Zomato | 25-30% | High |
+| Zepto/Blinkit | 20-25% | High |
+| Amazon/Flipkart | 15-20% | Platform takes cut |
+| **OWLY** | **0% ✨** | **0% ✨** |
+
+We believe in empowering creators and sellers, not nickel-and-diming them. The platform will be monetized through:
+- **Community Premium** - Optional paid features for advanced community tools
+- **Creator Tools** - Premium AI features and analytics
+- **Transparent Ads** - Non-intrusive, relevant product promotions
+
+### Why Contribute?
+Help build an ethical commerce platform where:
+- Creators keep 100% of their earnings
+- Sellers grow without platform rent-seeking
+- Communities own their commerce experience
+- Technology serves people, not profits
 
 ---
 

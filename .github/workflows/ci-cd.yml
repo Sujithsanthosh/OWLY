@@ -51,7 +51,7 @@ jobs:
       - name: Build Frontend
         working-directory: frontend
         run: npm run build
-  
+      
   security-scan:
     runs-on: ubuntu-latest
     steps:
@@ -64,7 +64,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --severity-threshold=high
-  
+
   docker-build:
     runs-on: ubuntu-latest
     needs: test
@@ -110,7 +110,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-  
+
   deploy:
     runs-on: ubuntu-latest
     needs: [test, docker-build]
@@ -119,57 +119,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
-        continue-on-error: true
-      
-      - name: Deploy to ECS
-        run: |
-          # Example ECS deployment
-          echo "Deploying to AWS ECS..."
-          # aws ecs update-service --cluster production --service owly --force-new-deployment
-        continue-on-error: true
-      
       - name: Deploy Notification
         if: success()
-        uses: slackapi/slack-github-action@v1
-        with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
-            {
-              "text": "✅ Deployment to production successful",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Deployment Status*\nProject: ${{ github.repository }}\nBranch: ${{ github.ref }}\nCommit: ${{ github.sha }}\nStatus: ✅ Success"
-                  }
-                }
-              ]
-            }
-        continue-on-error: true
-      
-      - name: Deployment Failed Notification
-        if: failure()
-        uses: slackapi/slack-github-action@v1
-        with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
-            {
-              "text": "❌ Deployment to production failed",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Deployment Status*\nProject: ${{ github.repository }}\nBranch: ${{ github.ref }}\nCommit: ${{ github.sha }}\nStatus: ❌ Failed"
-                  }
-                }
-              ]
-            }
+        run: |
+          echo "Deploy would happen here with proper AWS credentials configured"
         continue-on-error: true

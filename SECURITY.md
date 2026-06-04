@@ -1,3 +1,42 @@
+# Security Policy
+
+## Supported Versions
+
+| Version | Supported |
+|---------|-----------|
+| main    | ✅        |
+
+## Reporting a Vulnerability
+
+We take security seriously. If you discover a security vulnerability, please report it responsibly.
+
+### How to Report
+
+1. Go to [Security Advisories](https://github.com/Sujithsanthosh/OWLY/security/advisories)
+2. Click "Report a vulnerability"
+3. Provide detailed information about the vulnerability
+
+### What to Include
+
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
+
+## Security Measures
+
+- JWT authentication with refresh tokens
+- Role-based access control (customer, seller, creator, admin)
+- Rate limiting on all endpoints
+- Input validation and sanitization
+- bcrypt password hashing (12 rounds)
+- CORS configuration
+- Helmet.js security headers
+
+See below for detailed security documentation.
+
+---
+
 # Security Hardening Guide
 
 ## Overview
@@ -354,11 +393,6 @@ npm audit fix
 4. **Recover**: Restore systems
 5. **Notify**: Inform affected users (within 72 hours)
 6. **Review**: Post-incident analysis
-
-### Contact
-- **Security Email**: security@owly.app
-- **Emergency**: +1-XXX-XXX-XXXX
-- **Bug Bounty**: https://owly.app/security/bounty
 
 ## References
 - OWASP Top 10: https://owasp.org/www-project-top-ten/

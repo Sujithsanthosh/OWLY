@@ -2,6 +2,17 @@
 
 Thank you for your interest in contributing to OWLY! This document provides guidelines and instructions for contributing.
 
+## 🌟 Our Mission: Ethical Commerce for Everyone
+
+While platforms like Swiggy, Zomato, Zepto charge sellers **25-30% commissions**, OWLY is different. We're building a **zero-commission, zero-delivery-fee** platform because creators and sellers deserve better. Your contributions help us build technology that serves people, not profits.
+
+## Why Contribute?
+
+- 💰 **Sellers keep 100%** - No platform rent-seeking
+- 🚚 **Delivery partners earn fairly** - Zero platform-commission on deliveries
+- 🌍 **Open source = transparent** - No hidden fees or policies
+- 🔮 **Shape the future** - Build the ethical commerce platform the world needs
+
 ## Code of Conduct
 
 By participating, you're expected to uphold our standards of respectful and constructive communication.
@@ -142,3 +153,15 @@ cd frontend && npm run lint
 ## License
 
 By contributing, you agree your contributions are licensed under the MIT License.
+
+---
+
+## 🎯 Join the Ethical Commerce Movement
+
+Together, we're building the future of commerce where:
+- **Sellers win** - Keep 100% of sales, not 70%
+- **Creators thrive** - Monetize without platform cuts
+- **Communities flourish** - Own their commerce ecosystem
+- **Consumers save** - Lower prices without middlemen
+
+**Every PR brings us closer to revolutionizing commerce. Welcome to the movement! 🌍**

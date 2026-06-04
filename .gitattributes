@@ -1,1 +1,4 @@
 * text=auto eol=lf
+
+*.{sh,bash} text eol=lf
+*.{js,ts,tsx,jsx,json,md,yml,yaml,toml,cfg,conf} text eol=lf
